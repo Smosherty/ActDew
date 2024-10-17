@@ -1,23 +1,39 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Activity 5: Forms &amp; click event</title>
-  </head>
-  <body>
-    <h1>Activity 5: Forms &amp; click event</h1>
-    <p>
-      Add a form with two fields ("Rows" and "Columns") and a button ("Generate Table").
-      When the button is clicked it have to:
-    </p>
-      <ol>
-        <li>validate the data in the input fields (show errors if any and stop; if no error continue to next point)</li>
-        <li>remove a table#generated if exists </li>
-        <li>Add a table with as many rows and columns both Rows and Columns fields indicate</li>
-        <li>Each table cell must contain a text like: "Row: X, Col: Y"</li>
-      </ol>
-  </body>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Activity 5: Forms &amp; click event</title>
+</head>
+
+<body>
+  <h1>Activity 5: Forms &amp; click event</h1>
+  <p>
+    Add a form with two fields ("Rows" and "Columns") and a button ("Generate Table").
+    When the button is clicked it have to:
+  </p>
+  <ol>
+    <li>validate the data in the input fields (show errors if any and stop; if no error continue to next point)</li>
+    <li>remove a table#generated if exists </li>
+    <li>Add a table with as many rows and columns both Rows and Columns fields indicate</li>
+    <li>Each table cell must contain a text like: "Row: X, Col: Y"</li>
+  </ol>
+
+  <div>
+    <form action="" method="GET" onsubmit="createTable(event)">
+      <label for="rows">Lineas</label>
+      <input type="number" name="rows" max="99" min="0"/>
+      <label for="columns">Columnas</label>
+      <input type="number" name="columns" max="99" min="0"/>
+      <input type="submit" value="Generar Tabla" id="container"/>
+    </form>
+    <div id="container"></div>
+  </div>
+
+  <script src="generate.js"></script>
+</body>
+
 </html>

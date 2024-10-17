@@ -1,0 +1,12 @@
+#table-container{
+    height: 700px;
+    width: 1000px;
+    background-color: aquamarine;
+    display: flex;
+}
+
+.brick{
+    background-color: brown;
+    height: 40px;
+    width: 80px;
+}
